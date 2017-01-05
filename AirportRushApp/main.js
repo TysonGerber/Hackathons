@@ -17,10 +17,12 @@ function airCtl($http) {
 
     //aCtl.city = 'Denver'
     //console.dir(aCtl.city)
-    var APPID = process.env.APPID
-    var APPID2 = process.env.APPID2
+    
+   
     aCtl.name = function () {
         aCtl.city = aCtl.airportCity
+        var APPID = process.env.APPID
+        console.log('APPID')
         var current_query = 'https://airport.api.aero/airport/match/' + aCtl.city + '?user_key=' + APPID+ ''
         console.dir(current_query)
         $http.get(current_query)
@@ -63,7 +65,10 @@ function airCtl($http) {
 
             )
     }
+    
     aCtl.getGoogleMap = function () {
+         var APPID2 = process.env.APPID2
+         console.log('APPID2')
         var current_gmap_query = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + aCtl.gStreetAddressClean + ',+' + aCtl.gCity + ',+' + aCtl.gZip + '&destination=' + aCtl.airportLat + ',' + aCtl.airportLng + '&mode=driving&lnaguage=en&key= ' + APPID2 + ''
 
         // console.log(current_gmap_query)
