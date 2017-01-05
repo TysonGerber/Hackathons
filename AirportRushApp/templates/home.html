@@ -1,0 +1,16 @@
+<div class ="form-style-8">
+  <h2 id = "title"> Airport Rush Application </h2>
+    <form>
+        <input runat='server' id='airportCity' type='text' name='airport city' ng-model='aCtl.airportCity'>Airport City</input>
+        </br>
+        <input runat='server' id='userStreet' type='text' name='street address' ng-model='aCtl.userStreet'>Street Address</input>
+        </br>
+        <input runat='server' id='userCity' type='text' name='city' ng-model='aCtl.userCity'>City</input>
+        </br>
+        <input runat='server' id='userState' type='text' name='state' ng-model='aCtl.userState'>State</input>
+        </br>
+        <input runat='server' id='userZip' type='text' name='zip' ng-model='aCtl.userZip'>Zipcode</input>
+        </br>
+        <a href = "#/airports"><input id = "submitbutton" type = "button" value = "submit" ng-click='aCtl.userSubmit()'></input></br></a>
+    </form>
+</div>

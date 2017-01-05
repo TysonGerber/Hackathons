@@ -1,0 +1,13 @@
+   <div class ="form-style-8">
+     <h2 id = "title"> Airport Rush Application </h2>
+       <form>
+
+         <table>
+         <tr ng-repeat='airports in aCtl.airportSelect'><td>{{airports.name}}</td><td><a href = "#/waitTime" ng-click='aCtl.getAirportCode()'>{{airports.code}}</a></td></tr>
+            </table>
+
+
+           <!-- <a href = "#/airports"><input id = "submitbutton" type = "button" value = "submit" ng-click='aCtl.userSubmit()'></input></br></a> -->
+       </form>
+
+   </div>

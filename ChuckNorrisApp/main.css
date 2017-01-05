@@ -1,0 +1,46 @@
+/*body {
+  background-image: url(chucknorrisprotein2.png);
+  position: relative;
+  background-size: cover;
+}*/
+
+#chuckprotein {
+  width: 50vw;
+  height: 50vw;
+
+}
+
+.starter-template {
+  position: relative;
+  padding: 80px 215px;
+  text-align: center;
+  width: 50vw;
+  height: 50vw;
+}
+
+#apibutton {
+    position: absolute;
+    left: 80%;
+    bottom: -148px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 250px;
+    height: auto;
+}
+
+.quoteArea{
+/*   padding-top: 40px;
+  padding-left: 300px;  */
+  position: absolute;
+  left: 45%;
+  padding-top: 10px;
+  width: 500px;
+
+
+}
+
+a.navbar-brand{
+  position: absolute;
+  right: 39%;
+  font-size: 35px;
+}
