@@ -1,11 +1,15 @@
 angular.module('airApp')
     .controller('airControl', airCtl)
 
+ // exports.module is like saying app{} we are getting the object in the appid.js file
+
 airCtl.$inject = ['$http']
 function airCtl($http) {
     var aCtl = this;
 
     aCtl.title = 'hello';
+
+
 
     //     aCtl.getcity =  function (){
     //           console.log('hello there')
@@ -21,7 +25,10 @@ function airCtl($http) {
    
     aCtl.name = function () {
         aCtl.city = aCtl.airportCity
-        var APPID = process.env.APPID
+
+        // app.APPID is getting the actual object
+        var APPID = keys.APPID
+        // var APPID = process.env.APPID
         console.log('APPID')
         var current_query = 'https://airport.api.aero/airport/match/' + aCtl.city + '?user_key=' + APPID+ ''
         console.dir(current_query)
@@ -49,6 +56,8 @@ function airCtl($http) {
                 //aCtl.airportLng = aCtl.info.airports[0].lng
             })
     }
+
+    //TSA API
     aCtl.getTSA = function (querycode) {
         var current_tsa_query = 'http://apps.tsa.dhs.gov/MyTSAWebService/GetTSOWaitTimes.ashx?ap=' + querycode
         console.dir(current_tsa_query)
@@ -66,8 +75,11 @@ function airCtl($http) {
             )
     }
     
+    //GOOGLE MAP API
     aCtl.getGoogleMap = function () {
-         var APPID2 = process.env.APPID2
+
+         var APPID2 = keys.APPID2
+        //  var APPID2 = process.env.APPID2
          console.log('APPID2')
         var current_gmap_query = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + aCtl.gStreetAddressClean + ',+' + aCtl.gCity + ',+' + aCtl.gZip + '&destination=' + aCtl.airportLat + ',' + aCtl.airportLng + '&mode=driving&lnaguage=en&key= ' + APPID2 + ''
 
