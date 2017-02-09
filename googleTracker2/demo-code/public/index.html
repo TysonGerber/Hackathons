@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="tracker">
+
+<head>
+    <title>Full App Hack</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <script src="/js/module.js"></script>
+    <script src="/js/controller.js"></script>
+    <script src="/js/factory.js"></script>
+    
+
+</head>
+
+<body ng-controller='trackController as tCtrl'>
+    <a ng-href="#/">home</a>
+    <a ng-href="#/about">about</a>
+    <p>{{tCtrl.greeting}}</p>
+    <button ng-click="tCtrl.geoFindMe($event)">Show my location</button></p>
+<div id="out"></div>
+   <ng-view>
+       <!--partials go here!-->
+   </ng-view>
+</body>
+
+</html>
